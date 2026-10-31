@@ -1,0 +1,49 @@
+{
+  "name": "@looot/mastra",
+  "version": "0.1.0",
+  "description": "looot tools for Mastra agents: search a 4,200+ data API catalog, see the price, run it, read the balance.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "scan": "bash scripts/leak-scan.sh .",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": ["mastra", "tools", "looot", "data-enrichment", "agents", "mcp"],
+  "license": "MIT",
+  "homepage": "https://looot.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loootai/looot-mastra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/loootai/looot-mastra/issues"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "peerDependencies": {
+    "@mastra/core": ">=1.0.0 <2",
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@mastra/core": "1.79.0",
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5",
+    "zod": "4.6.7"
+  }
+}

@@ -1,0 +1,15 @@
+# looot-mastra
+
+> looot tools for Mastra agents: search, inspect, run, balance.
+
+looot is one key and one prepaid balance for 4,200+ data APIs from 300+ providers. The agent searches the catalog, sees the price before it runs, and pays per call.
+
+## Install
+
+- Remote MCP server: https://api.looot.ai/mcp (use with Mastra MCPClient)
+- This repo: npm install github:loootai/looot-mastra#v0.1.0 @mastra/core zod
+
+## Links
+
+- Docs: https://docs.looot.ai
+- Pricing: prepaid balance (top up from $5), charged per call, failed calls are free
